@@ -25,7 +25,7 @@ def translator(event):
         elif (drawer_list.get() == "Italy"):
             translated_text = translator.translate(text_src, src='auto', dest='it')
             text_dest.insert(1.0, chars=translated_text.text)
-        elif (drawer_list.get() == "German"):
+        elif (drawer_list.get() == "Germany"):
             translated_text = translator.translate(text_src, src='auto', dest='de')
             text_dest.insert(1.0, chars=translated_text.text)
         elif (drawer_list.get() == "French"):
@@ -63,7 +63,7 @@ drawer_list = ttk.Combobox(main_root, textvariable=langs_val, width=25, cursor="
 drawer_list.place(x=175, y=29)
 drawer_list ['state'] = 'readonly'
 # List of Languages
-lang_list = ["English", "Persian", "Arabic", "French", "Chinese", "Jpan", "German", "Italy"]
+lang_list = ["English", "Persian", "Arabic", "French", "Chinese", "Jpan", "Germany", "Italy"]
 lang_list.sort()
 # Insert list in Combo
 drawer_list ['values'] = tuple(lang_list)
