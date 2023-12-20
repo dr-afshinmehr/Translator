@@ -44,4 +44,5 @@ And...
 ***The tkinter Python library is used for the graphical interface of this program.***
 
 *for More Details Visit "googletrans" Doc Page Link:
+
 **https://py-googletrans.readthedocs.io/en/latest/**

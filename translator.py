@@ -22,8 +22,11 @@ def translator(event):
             translated_text = translator.translate(text_src, src='auto', dest='ja')
             text_dest.insert(1.0, chars=translated_text.text)
             text_dest.tag_add("Right", 1.0, "end")
-        elif (drawer_list.get() == "Italy"):
-            translated_text = translator.translate(text_src, src='auto', dest='it')
+        elif (drawer_list.get() == "Turkey"):
+            translated_text = translator.translate(text_src, src='auto', dest='tr')
+            text_dest.insert(1.0, chars=translated_text.text)
+        elif (drawer_list.get() == "Russian"):
+            translated_text = translator.translate(text_src, src='auto', dest='ru')
             text_dest.insert(1.0, chars=translated_text.text)
         elif (drawer_list.get() == "Germany"):
             translated_text = translator.translate(text_src, src='auto', dest='de')
@@ -36,6 +39,10 @@ def translator(event):
             text_dest.insert(1.0, chars=translated_text.text)
         elif (drawer_list.get() == "Arabic"):
             translated_text = translator.translate(text_src, src='auto', dest='ar')
+            text_dest.insert(1.0, chars=translated_text.text)
+            text_dest.tag_add("Right", 1.0, "end")
+        elif (drawer_list.get() == "India"):
+            translated_text = translator.translate(text_src, src='auto', dest='hi')
             text_dest.insert(1.0, chars=translated_text.text)
             text_dest.tag_add("Right", 1.0, "end")
     except Exception as Error:
@@ -63,7 +70,7 @@ drawer_list = ttk.Combobox(main_root, textvariable=langs_val, width=25, cursor="
 drawer_list.place(x=175, y=29)
 drawer_list ['state'] = 'readonly'
 # List of Languages
-lang_list = ["English", "Persian", "Arabic", "French", "Chinese", "Jpan", "Germany", "Italy"]
+lang_list = ["English", "Persian", "Arabic", "French", "Chinese", "Jpan", "Turkey", "India", "Russian", "Germany", "Italy"]
 lang_list.sort()
 # Insert list in Combo
 drawer_list ['values'] = tuple(lang_list)
